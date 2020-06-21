@@ -17,6 +17,8 @@ abstract class ObjectValue<T> {
   @override
   int get hashCode => value.hashCode;
 
+  bool isValid() => value.isRight();
+
   @override
   String toString() => 'ObjectValue(value: $value)';
 }

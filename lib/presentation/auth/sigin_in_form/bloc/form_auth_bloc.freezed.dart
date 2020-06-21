@@ -12,15 +12,15 @@ T _$identity<T>(T value) => value;
 class _$SignInFormEventTearOff {
   const _$SignInFormEventTearOff();
 
-  EmailChanged emailChanged(String email) {
+  EmailChanged emailChanged({String email}) {
     return EmailChanged(
-      email,
+      email: email,
     );
   }
 
-  PasswordChanged passwordChanged(String password) {
+  PasswordChanged passwordChanged({String password}) {
     return PasswordChanged(
-      password,
+      password: password,
     );
   }
 
@@ -116,13 +116,13 @@ class _$EmailChangedCopyWithImpl<$Res>
     Object email = freezed,
   }) {
     return _then(EmailChanged(
-      email == freezed ? _value.email : email as String,
+      email: email == freezed ? _value.email : email as String,
     ));
   }
 }
 
 class _$EmailChanged implements EmailChanged {
-  const _$EmailChanged(this.email) : assert(email != null);
+  const _$EmailChanged({this.email});
 
   @override
   final String email;
@@ -220,7 +220,7 @@ class _$EmailChanged implements EmailChanged {
 }
 
 abstract class EmailChanged implements SignInFormEvent {
-  const factory EmailChanged(String email) = _$EmailChanged;
+  const factory EmailChanged({String email}) = _$EmailChanged;
 
   String get email;
   $EmailChangedCopyWith<EmailChanged> get copyWith;
@@ -248,13 +248,13 @@ class _$PasswordChangedCopyWithImpl<$Res>
     Object password = freezed,
   }) {
     return _then(PasswordChanged(
-      password == freezed ? _value.password : password as String,
+      password: password == freezed ? _value.password : password as String,
     ));
   }
 }
 
 class _$PasswordChanged implements PasswordChanged {
-  const _$PasswordChanged(this.password) : assert(password != null);
+  const _$PasswordChanged({this.password});
 
   @override
   final String password;
@@ -353,7 +353,7 @@ class _$PasswordChanged implements PasswordChanged {
 }
 
 abstract class PasswordChanged implements SignInFormEvent {
-  const factory PasswordChanged(String password) = _$PasswordChanged;
+  const factory PasswordChanged({String password}) = _$PasswordChanged;
 
   String get password;
   $PasswordChangedCopyWith<PasswordChanged> get copyWith;
