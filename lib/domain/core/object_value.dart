@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:todo_app/domain/core/failures.dart';
+import 'package:todo_app/domain/core/unexpected_error.dart';
 
 @immutable
 abstract class ObjectValue<T> {
@@ -12,6 +13,10 @@ abstract class ObjectValue<T> {
     if (identical(this, o)) return true;
 
     return o is ObjectValue && o.value == value;
+  }
+
+  getValueOrFailure() {
+    return value.fold((failure) => UnexpectedError(failure), (r) => r);
   }
 
   @override
