@@ -7,23 +7,26 @@ part of 'auth_failure.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// ignore: unused_element
+T _$identity<T>(T value) => value;
+
 class _$AuthFailureTearOff {
   const _$AuthFailureTearOff();
 
-  CancelledByUser cancelledByUser() {
-    return const CancelledByUser();
-  }
-
-  EmailIsAllreadyExist emailIsAllreadyExist() {
-    return const EmailIsAllreadyExist();
-  }
-
-  InvalidEmailAndPasswordCompination invalidEmailAndPasswordCompination() {
-    return const InvalidEmailAndPasswordCompination();
+  UserCancelRequest userCancelRequest() {
+    return const UserCancelRequest();
   }
 
   ServerError serverError() {
     return const ServerError();
+  }
+
+  WrongEmailOrPassword wrongEmailOrPassword() {
+    return const WrongEmailOrPassword();
+  }
+
+  EmailIsAllreadyInUse emailIsAllreadyInUse() {
+    return const EmailIsAllreadyInUse();
   }
 }
 
@@ -33,35 +36,32 @@ const $AuthFailure = _$AuthFailureTearOff();
 mixin _$AuthFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cancelledByUser(),
-    @required Result emailIsAllreadyExist(),
-    @required Result invalidEmailAndPasswordCompination(),
+    @required Result userCancelRequest(),
     @required Result serverError(),
+    @required Result wrongEmailOrPassword(),
+    @required Result emailIsAllreadyInUse(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result cancelledByUser(),
-    Result emailIsAllreadyExist(),
-    Result invalidEmailAndPasswordCompination(),
+    Result userCancelRequest(),
     Result serverError(),
+    Result wrongEmailOrPassword(),
+    Result emailIsAllreadyInUse(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cancelledByUser(CancelledByUser value),
-    @required Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    @required
-        Result invalidEmailAndPasswordCompination(
-            InvalidEmailAndPasswordCompination value),
+    @required Result userCancelRequest(UserCancelRequest value),
     @required Result serverError(ServerError value),
+    @required Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    @required Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result cancelledByUser(CancelledByUser value),
-    Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    Result invalidEmailAndPasswordCompination(
-        InvalidEmailAndPasswordCompination value),
+    Result userCancelRequest(UserCancelRequest value),
     Result serverError(ServerError value),
+    Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
     @required Result orElse(),
   });
 }
@@ -80,42 +80,34 @@ class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
   final $Res Function(AuthFailure) _then;
 }
 
-abstract class $CancelledByUserCopyWith<$Res> {
-  factory $CancelledByUserCopyWith(
-          CancelledByUser value, $Res Function(CancelledByUser) then) =
-      _$CancelledByUserCopyWithImpl<$Res>;
+abstract class $UserCancelRequestCopyWith<$Res> {
+  factory $UserCancelRequestCopyWith(
+          UserCancelRequest value, $Res Function(UserCancelRequest) then) =
+      _$UserCancelRequestCopyWithImpl<$Res>;
 }
 
-class _$CancelledByUserCopyWithImpl<$Res>
+class _$UserCancelRequestCopyWithImpl<$Res>
     extends _$AuthFailureCopyWithImpl<$Res>
-    implements $CancelledByUserCopyWith<$Res> {
-  _$CancelledByUserCopyWithImpl(
-      CancelledByUser _value, $Res Function(CancelledByUser) _then)
-      : super(_value, (v) => _then(v as CancelledByUser));
+    implements $UserCancelRequestCopyWith<$Res> {
+  _$UserCancelRequestCopyWithImpl(
+      UserCancelRequest _value, $Res Function(UserCancelRequest) _then)
+      : super(_value, (v) => _then(v as UserCancelRequest));
 
   @override
-  CancelledByUser get _value => super._value as CancelledByUser;
+  UserCancelRequest get _value => super._value as UserCancelRequest;
 }
 
-class _$CancelledByUser
-    with DiagnosticableTreeMixin
-    implements CancelledByUser {
-  const _$CancelledByUser();
+class _$UserCancelRequest implements UserCancelRequest {
+  const _$UserCancelRequest();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthFailure.cancelledByUser()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AuthFailure.cancelledByUser'));
+  String toString() {
+    return 'AuthFailure.userCancelRequest()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is CancelledByUser);
+    return identical(this, other) || (other is UserCancelRequest);
   }
 
   @override
@@ -124,30 +116,30 @@ class _$CancelledByUser
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cancelledByUser(),
-    @required Result emailIsAllreadyExist(),
-    @required Result invalidEmailAndPasswordCompination(),
+    @required Result userCancelRequest(),
     @required Result serverError(),
+    @required Result wrongEmailOrPassword(),
+    @required Result emailIsAllreadyInUse(),
   }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
+    assert(userCancelRequest != null);
     assert(serverError != null);
-    return cancelledByUser();
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return userCancelRequest();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result cancelledByUser(),
-    Result emailIsAllreadyExist(),
-    Result invalidEmailAndPasswordCompination(),
+    Result userCancelRequest(),
     Result serverError(),
+    Result wrongEmailOrPassword(),
+    Result emailIsAllreadyInUse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (cancelledByUser != null) {
-      return cancelledByUser();
+    if (userCancelRequest != null) {
+      return userCancelRequest();
     }
     return orElse();
   }
@@ -155,270 +147,37 @@ class _$CancelledByUser
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cancelledByUser(CancelledByUser value),
-    @required Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    @required
-        Result invalidEmailAndPasswordCompination(
-            InvalidEmailAndPasswordCompination value),
+    @required Result userCancelRequest(UserCancelRequest value),
     @required Result serverError(ServerError value),
+    @required Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    @required Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
   }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
+    assert(userCancelRequest != null);
     assert(serverError != null);
-    return cancelledByUser(this);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return userCancelRequest(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result cancelledByUser(CancelledByUser value),
-    Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    Result invalidEmailAndPasswordCompination(
-        InvalidEmailAndPasswordCompination value),
+    Result userCancelRequest(UserCancelRequest value),
     Result serverError(ServerError value),
+    Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (cancelledByUser != null) {
-      return cancelledByUser(this);
+    if (userCancelRequest != null) {
+      return userCancelRequest(this);
     }
     return orElse();
   }
 }
 
-abstract class CancelledByUser implements AuthFailure {
-  const factory CancelledByUser() = _$CancelledByUser;
-}
-
-abstract class $EmailIsAllreadyExistCopyWith<$Res> {
-  factory $EmailIsAllreadyExistCopyWith(EmailIsAllreadyExist value,
-          $Res Function(EmailIsAllreadyExist) then) =
-      _$EmailIsAllreadyExistCopyWithImpl<$Res>;
-}
-
-class _$EmailIsAllreadyExistCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $EmailIsAllreadyExistCopyWith<$Res> {
-  _$EmailIsAllreadyExistCopyWithImpl(
-      EmailIsAllreadyExist _value, $Res Function(EmailIsAllreadyExist) _then)
-      : super(_value, (v) => _then(v as EmailIsAllreadyExist));
-
-  @override
-  EmailIsAllreadyExist get _value => super._value as EmailIsAllreadyExist;
-}
-
-class _$EmailIsAllreadyExist
-    with DiagnosticableTreeMixin
-    implements EmailIsAllreadyExist {
-  const _$EmailIsAllreadyExist();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthFailure.emailIsAllreadyExist()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AuthFailure.emailIsAllreadyExist'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EmailIsAllreadyExist);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result cancelledByUser(),
-    @required Result emailIsAllreadyExist(),
-    @required Result invalidEmailAndPasswordCompination(),
-    @required Result serverError(),
-  }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
-    assert(serverError != null);
-    return emailIsAllreadyExist();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result cancelledByUser(),
-    Result emailIsAllreadyExist(),
-    Result invalidEmailAndPasswordCompination(),
-    Result serverError(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (emailIsAllreadyExist != null) {
-      return emailIsAllreadyExist();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result cancelledByUser(CancelledByUser value),
-    @required Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    @required
-        Result invalidEmailAndPasswordCompination(
-            InvalidEmailAndPasswordCompination value),
-    @required Result serverError(ServerError value),
-  }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
-    assert(serverError != null);
-    return emailIsAllreadyExist(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result cancelledByUser(CancelledByUser value),
-    Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    Result invalidEmailAndPasswordCompination(
-        InvalidEmailAndPasswordCompination value),
-    Result serverError(ServerError value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (emailIsAllreadyExist != null) {
-      return emailIsAllreadyExist(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class EmailIsAllreadyExist implements AuthFailure {
-  const factory EmailIsAllreadyExist() = _$EmailIsAllreadyExist;
-}
-
-abstract class $InvalidEmailAndPasswordCompinationCopyWith<$Res> {
-  factory $InvalidEmailAndPasswordCompinationCopyWith(
-          InvalidEmailAndPasswordCompination value,
-          $Res Function(InvalidEmailAndPasswordCompination) then) =
-      _$InvalidEmailAndPasswordCompinationCopyWithImpl<$Res>;
-}
-
-class _$InvalidEmailAndPasswordCompinationCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res>
-    implements $InvalidEmailAndPasswordCompinationCopyWith<$Res> {
-  _$InvalidEmailAndPasswordCompinationCopyWithImpl(
-      InvalidEmailAndPasswordCompination _value,
-      $Res Function(InvalidEmailAndPasswordCompination) _then)
-      : super(_value, (v) => _then(v as InvalidEmailAndPasswordCompination));
-
-  @override
-  InvalidEmailAndPasswordCompination get _value =>
-      super._value as InvalidEmailAndPasswordCompination;
-}
-
-class _$InvalidEmailAndPasswordCompination
-    with DiagnosticableTreeMixin
-    implements InvalidEmailAndPasswordCompination {
-  const _$InvalidEmailAndPasswordCompination();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthFailure.invalidEmailAndPasswordCompination()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AuthFailure.invalidEmailAndPasswordCompination'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is InvalidEmailAndPasswordCompination);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result cancelledByUser(),
-    @required Result emailIsAllreadyExist(),
-    @required Result invalidEmailAndPasswordCompination(),
-    @required Result serverError(),
-  }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
-    assert(serverError != null);
-    return invalidEmailAndPasswordCompination();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result cancelledByUser(),
-    Result emailIsAllreadyExist(),
-    Result invalidEmailAndPasswordCompination(),
-    Result serverError(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidEmailAndPasswordCompination != null) {
-      return invalidEmailAndPasswordCompination();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result cancelledByUser(CancelledByUser value),
-    @required Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    @required
-        Result invalidEmailAndPasswordCompination(
-            InvalidEmailAndPasswordCompination value),
-    @required Result serverError(ServerError value),
-  }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
-    assert(serverError != null);
-    return invalidEmailAndPasswordCompination(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result cancelledByUser(CancelledByUser value),
-    Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    Result invalidEmailAndPasswordCompination(
-        InvalidEmailAndPasswordCompination value),
-    Result serverError(ServerError value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (invalidEmailAndPasswordCompination != null) {
-      return invalidEmailAndPasswordCompination(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class InvalidEmailAndPasswordCompination implements AuthFailure {
-  const factory InvalidEmailAndPasswordCompination() =
-      _$InvalidEmailAndPasswordCompination;
+abstract class UserCancelRequest implements AuthFailure {
+  const factory UserCancelRequest() = _$UserCancelRequest;
 }
 
 abstract class $ServerErrorCopyWith<$Res> {
@@ -437,18 +196,12 @@ class _$ServerErrorCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
   ServerError get _value => super._value as ServerError;
 }
 
-class _$ServerError with DiagnosticableTreeMixin implements ServerError {
+class _$ServerError implements ServerError {
   const _$ServerError();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AuthFailure.serverError()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AuthFailure.serverError'));
   }
 
   @override
@@ -462,25 +215,25 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result cancelledByUser(),
-    @required Result emailIsAllreadyExist(),
-    @required Result invalidEmailAndPasswordCompination(),
+    @required Result userCancelRequest(),
     @required Result serverError(),
+    @required Result wrongEmailOrPassword(),
+    @required Result emailIsAllreadyInUse(),
   }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
+    assert(userCancelRequest != null);
     assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
     return serverError();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result cancelledByUser(),
-    Result emailIsAllreadyExist(),
-    Result invalidEmailAndPasswordCompination(),
+    Result userCancelRequest(),
     Result serverError(),
+    Result wrongEmailOrPassword(),
+    Result emailIsAllreadyInUse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -493,28 +246,25 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result cancelledByUser(CancelledByUser value),
-    @required Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    @required
-        Result invalidEmailAndPasswordCompination(
-            InvalidEmailAndPasswordCompination value),
+    @required Result userCancelRequest(UserCancelRequest value),
     @required Result serverError(ServerError value),
+    @required Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    @required Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
   }) {
-    assert(cancelledByUser != null);
-    assert(emailIsAllreadyExist != null);
-    assert(invalidEmailAndPasswordCompination != null);
+    assert(userCancelRequest != null);
     assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
     return serverError(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result cancelledByUser(CancelledByUser value),
-    Result emailIsAllreadyExist(EmailIsAllreadyExist value),
-    Result invalidEmailAndPasswordCompination(
-        InvalidEmailAndPasswordCompination value),
+    Result userCancelRequest(UserCancelRequest value),
     Result serverError(ServerError value),
+    Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -527,4 +277,204 @@ class _$ServerError with DiagnosticableTreeMixin implements ServerError {
 
 abstract class ServerError implements AuthFailure {
   const factory ServerError() = _$ServerError;
+}
+
+abstract class $WrongEmailOrPasswordCopyWith<$Res> {
+  factory $WrongEmailOrPasswordCopyWith(WrongEmailOrPassword value,
+          $Res Function(WrongEmailOrPassword) then) =
+      _$WrongEmailOrPasswordCopyWithImpl<$Res>;
+}
+
+class _$WrongEmailOrPasswordCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $WrongEmailOrPasswordCopyWith<$Res> {
+  _$WrongEmailOrPasswordCopyWithImpl(
+      WrongEmailOrPassword _value, $Res Function(WrongEmailOrPassword) _then)
+      : super(_value, (v) => _then(v as WrongEmailOrPassword));
+
+  @override
+  WrongEmailOrPassword get _value => super._value as WrongEmailOrPassword;
+}
+
+class _$WrongEmailOrPassword implements WrongEmailOrPassword {
+  const _$WrongEmailOrPassword();
+
+  @override
+  String toString() {
+    return 'AuthFailure.wrongEmailOrPassword()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is WrongEmailOrPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result userCancelRequest(),
+    @required Result serverError(),
+    @required Result wrongEmailOrPassword(),
+    @required Result emailIsAllreadyInUse(),
+  }) {
+    assert(userCancelRequest != null);
+    assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return wrongEmailOrPassword();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result userCancelRequest(),
+    Result serverError(),
+    Result wrongEmailOrPassword(),
+    Result emailIsAllreadyInUse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (wrongEmailOrPassword != null) {
+      return wrongEmailOrPassword();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result userCancelRequest(UserCancelRequest value),
+    @required Result serverError(ServerError value),
+    @required Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    @required Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
+  }) {
+    assert(userCancelRequest != null);
+    assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return wrongEmailOrPassword(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result userCancelRequest(UserCancelRequest value),
+    Result serverError(ServerError value),
+    Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (wrongEmailOrPassword != null) {
+      return wrongEmailOrPassword(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WrongEmailOrPassword implements AuthFailure {
+  const factory WrongEmailOrPassword() = _$WrongEmailOrPassword;
+}
+
+abstract class $EmailIsAllreadyInUseCopyWith<$Res> {
+  factory $EmailIsAllreadyInUseCopyWith(EmailIsAllreadyInUse value,
+          $Res Function(EmailIsAllreadyInUse) then) =
+      _$EmailIsAllreadyInUseCopyWithImpl<$Res>;
+}
+
+class _$EmailIsAllreadyInUseCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res>
+    implements $EmailIsAllreadyInUseCopyWith<$Res> {
+  _$EmailIsAllreadyInUseCopyWithImpl(
+      EmailIsAllreadyInUse _value, $Res Function(EmailIsAllreadyInUse) _then)
+      : super(_value, (v) => _then(v as EmailIsAllreadyInUse));
+
+  @override
+  EmailIsAllreadyInUse get _value => super._value as EmailIsAllreadyInUse;
+}
+
+class _$EmailIsAllreadyInUse implements EmailIsAllreadyInUse {
+  const _$EmailIsAllreadyInUse();
+
+  @override
+  String toString() {
+    return 'AuthFailure.emailIsAllreadyInUse()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is EmailIsAllreadyInUse);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result userCancelRequest(),
+    @required Result serverError(),
+    @required Result wrongEmailOrPassword(),
+    @required Result emailIsAllreadyInUse(),
+  }) {
+    assert(userCancelRequest != null);
+    assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return emailIsAllreadyInUse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result userCancelRequest(),
+    Result serverError(),
+    Result wrongEmailOrPassword(),
+    Result emailIsAllreadyInUse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (emailIsAllreadyInUse != null) {
+      return emailIsAllreadyInUse();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result userCancelRequest(UserCancelRequest value),
+    @required Result serverError(ServerError value),
+    @required Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    @required Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
+  }) {
+    assert(userCancelRequest != null);
+    assert(serverError != null);
+    assert(wrongEmailOrPassword != null);
+    assert(emailIsAllreadyInUse != null);
+    return emailIsAllreadyInUse(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result userCancelRequest(UserCancelRequest value),
+    Result serverError(ServerError value),
+    Result wrongEmailOrPassword(WrongEmailOrPassword value),
+    Result emailIsAllreadyInUse(EmailIsAllreadyInUse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (emailIsAllreadyInUse != null) {
+      return emailIsAllreadyInUse(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmailIsAllreadyInUse implements AuthFailure {
+  const factory EmailIsAllreadyInUse() = _$EmailIsAllreadyInUse;
 }
