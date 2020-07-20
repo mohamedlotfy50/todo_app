@@ -6,6 +6,8 @@ import 'package:injectable/injectable.dart';
 import 'package:todo_app/domain/auth/auth_facade.dart';
 import 'package:todo_app/domain/auth/objects_classes.dart';
 import 'package:todo_app/domain/auth/auth_failure.dart';
+import 'package:todo_app/domain/auth/user.dart';
+import './firebase_extension.dart';
 
 @LazySingleton(as: AuthFacade)
 class FirebaseFacade implements AuthFacade {
@@ -71,4 +73,17 @@ class FirebaseFacade implements AuthFacade {
     await _firebaseAuth.signInWithCredential(_userCredential);
     return right(unit);
   }
+
+  @override
+  Future<Option<User>> getUserID() => _firebaseAuth.currentUser().then(
+        (firebaseUser) => optionOf(
+          firebaseUser?.toDomain(),
+        ),
+      );
+
+  @override
+  Future<void> signOut() => Future.wait([
+        _googleSignIn.signOut(),
+        _firebaseAuth.signOut(),
+      ]);
 }

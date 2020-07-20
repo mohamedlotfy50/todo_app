@@ -22,6 +22,10 @@ abstract class ObjectClass<T> {
     return value.fold((f) => throw UnExpectedFailure(f), id);
   }
 
+  Either<ValueFailure<dynamic>, Unit> get failOrUnit {
+    return value.fold((f) => left(f), (r) => right(unit));
+  }
+
   @override
   int get hashCode => value.hashCode;
 

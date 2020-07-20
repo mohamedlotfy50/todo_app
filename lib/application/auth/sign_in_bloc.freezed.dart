@@ -9,8 +9,8 @@ part of 'sign_in_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
-class _$SignInOrRegisterTearOff {
-  const _$SignInOrRegisterTearOff();
+class _$SignInFormEventTearOff {
+  const _$SignInFormEventTearOff();
 
   EmailChange emailChange({@required String emailStr}) {
     return EmailChange(
@@ -38,9 +38,9 @@ class _$SignInOrRegisterTearOff {
 }
 
 // ignore: unused_element
-const $SignInOrRegister = _$SignInOrRegisterTearOff();
+const $SignInFormEvent = _$SignInFormEventTearOff();
 
-mixin _$SignInOrRegister {
+mixin _$SignInFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result emailChange(String emailStr),
@@ -79,19 +79,19 @@ mixin _$SignInOrRegister {
   });
 }
 
-abstract class $SignInOrRegisterCopyWith<$Res> {
-  factory $SignInOrRegisterCopyWith(
-          SignInOrRegister value, $Res Function(SignInOrRegister) then) =
-      _$SignInOrRegisterCopyWithImpl<$Res>;
+abstract class $SignInFormEventCopyWith<$Res> {
+  factory $SignInFormEventCopyWith(
+          SignInFormEvent value, $Res Function(SignInFormEvent) then) =
+      _$SignInFormEventCopyWithImpl<$Res>;
 }
 
-class _$SignInOrRegisterCopyWithImpl<$Res>
-    implements $SignInOrRegisterCopyWith<$Res> {
-  _$SignInOrRegisterCopyWithImpl(this._value, this._then);
+class _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInFormEventCopyWith<$Res> {
+  _$SignInFormEventCopyWithImpl(this._value, this._then);
 
-  final SignInOrRegister _value;
+  final SignInFormEvent _value;
   // ignore: unused_field
-  final $Res Function(SignInOrRegister) _then;
+  final $Res Function(SignInFormEvent) _then;
 }
 
 abstract class $EmailChangeCopyWith<$Res> {
@@ -102,7 +102,7 @@ abstract class $EmailChangeCopyWith<$Res> {
 }
 
 class _$EmailChangeCopyWithImpl<$Res>
-    extends _$SignInOrRegisterCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements $EmailChangeCopyWith<$Res> {
   _$EmailChangeCopyWithImpl(
       EmailChange _value, $Res Function(EmailChange) _then)
@@ -129,14 +129,14 @@ class _$EmailChange with DiagnosticableTreeMixin implements EmailChange {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInOrRegister.emailChange(emailStr: $emailStr)';
+    return 'SignInFormEvent.emailChange(emailStr: $emailStr)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInOrRegister.emailChange'))
+      ..add(DiagnosticsProperty('type', 'SignInFormEvent.emailChange'))
       ..add(DiagnosticsProperty('emailStr', emailStr));
   }
 
@@ -228,7 +228,7 @@ class _$EmailChange with DiagnosticableTreeMixin implements EmailChange {
   }
 }
 
-abstract class EmailChange implements SignInOrRegister {
+abstract class EmailChange implements SignInFormEvent {
   const factory EmailChange({@required String emailStr}) = _$EmailChange;
 
   String get emailStr;
@@ -243,7 +243,7 @@ abstract class $PasswordChangeCopyWith<$Res> {
 }
 
 class _$PasswordChangeCopyWithImpl<$Res>
-    extends _$SignInOrRegisterCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements $PasswordChangeCopyWith<$Res> {
   _$PasswordChangeCopyWithImpl(
       PasswordChange _value, $Res Function(PasswordChange) _then)
@@ -272,14 +272,14 @@ class _$PasswordChange with DiagnosticableTreeMixin implements PasswordChange {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInOrRegister.passwordChange(passwordStr: $passwordStr)';
+    return 'SignInFormEvent.passwordChange(passwordStr: $passwordStr)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'SignInOrRegister.passwordChange'))
+      ..add(DiagnosticsProperty('type', 'SignInFormEvent.passwordChange'))
       ..add(DiagnosticsProperty('passwordStr', passwordStr));
   }
 
@@ -371,7 +371,7 @@ class _$PasswordChange with DiagnosticableTreeMixin implements PasswordChange {
   }
 }
 
-abstract class PasswordChange implements SignInOrRegister {
+abstract class PasswordChange implements SignInFormEvent {
   const factory PasswordChange({@required String passwordStr}) =
       _$PasswordChange;
 
@@ -386,7 +386,7 @@ abstract class $SignInWithGmailCopyWith<$Res> {
 }
 
 class _$SignInWithGmailCopyWithImpl<$Res>
-    extends _$SignInOrRegisterCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements $SignInWithGmailCopyWith<$Res> {
   _$SignInWithGmailCopyWithImpl(
       SignInWithGmail _value, $Res Function(SignInWithGmail) _then)
@@ -403,15 +403,14 @@ class _$SignInWithGmail
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInOrRegister.signInWithGmail()';
+    return 'SignInFormEvent.signInWithGmail()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    // ignore: avoid_single_cascade_in_expression_statements
     properties
-      ..add(DiagnosticsProperty('type', 'SignInOrRegister.signInWithGmail'));
+      ..add(DiagnosticsProperty('type', 'SignInFormEvent.signInWithGmail'));
   }
 
   @override
@@ -493,7 +492,7 @@ class _$SignInWithGmail
   }
 }
 
-abstract class SignInWithGmail implements SignInOrRegister {
+abstract class SignInWithGmail implements SignInFormEvent {
   const factory SignInWithGmail() = _$SignInWithGmail;
 }
 
@@ -504,7 +503,7 @@ abstract class $SignInWithEmailAndPasswordCopyWith<$Res> {
 }
 
 class _$SignInWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$SignInOrRegisterCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements $SignInWithEmailAndPasswordCopyWith<$Res> {
   _$SignInWithEmailAndPasswordCopyWithImpl(SignInWithEmailAndPassword _value,
       $Res Function(SignInWithEmailAndPassword) _then)
@@ -522,16 +521,15 @@ class _$SignInWithEmailAndPassword
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInOrRegister.signInWithEmailAndPassword()';
+    return 'SignInFormEvent.signInWithEmailAndPassword()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    // ignore: avoid_single_cascade_in_expression_statements
     properties
       ..add(DiagnosticsProperty(
-          'type', 'SignInOrRegister.signInWithEmailAndPassword'));
+          'type', 'SignInFormEvent.signInWithEmailAndPassword'));
   }
 
   @override
@@ -613,7 +611,7 @@ class _$SignInWithEmailAndPassword
   }
 }
 
-abstract class SignInWithEmailAndPassword implements SignInOrRegister {
+abstract class SignInWithEmailAndPassword implements SignInFormEvent {
   const factory SignInWithEmailAndPassword() = _$SignInWithEmailAndPassword;
 }
 
@@ -625,7 +623,7 @@ abstract class $RegisterWithEmailAndPasswordCopyWith<$Res> {
 }
 
 class _$RegisterWithEmailAndPasswordCopyWithImpl<$Res>
-    extends _$SignInOrRegisterCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements $RegisterWithEmailAndPasswordCopyWith<$Res> {
   _$RegisterWithEmailAndPasswordCopyWithImpl(
       RegisterWithEmailAndPassword _value,
@@ -644,16 +642,15 @@ class _$RegisterWithEmailAndPassword
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SignInOrRegister.registerWithEmailAndPassword()';
+    return 'SignInFormEvent.registerWithEmailAndPassword()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    // ignore: avoid_single_cascade_in_expression_statements
     properties
       ..add(DiagnosticsProperty(
-          'type', 'SignInOrRegister.registerWithEmailAndPassword'));
+          'type', 'SignInFormEvent.registerWithEmailAndPassword'));
   }
 
   @override
@@ -735,20 +732,20 @@ class _$RegisterWithEmailAndPassword
   }
 }
 
-abstract class RegisterWithEmailAndPassword implements SignInOrRegister {
+abstract class RegisterWithEmailAndPassword implements SignInFormEvent {
   const factory RegisterWithEmailAndPassword() = _$RegisterWithEmailAndPassword;
 }
 
-class _$FormStateTearOff {
-  const _$FormStateTearOff();
+class _$SignInFormStateTearOff {
+  const _$SignInFormStateTearOff();
 
-  _FormState call(
+  _SignInFormState call(
       {@required EmailAddress emailAddress,
       @required Password password,
       @required bool isSubmitted,
       @required bool showErrorMessage,
       @required Option<Either<AuthFailure, Unit>> authFailureOrSuccess}) {
-    return _FormState(
+    return _SignInFormState(
       emailAddress: emailAddress,
       password: password,
       isSubmitted: isSubmitted,
@@ -759,21 +756,22 @@ class _$FormStateTearOff {
 }
 
 // ignore: unused_element
-const $FormState = _$FormStateTearOff();
+const $SignInFormState = _$SignInFormStateTearOff();
 
-mixin _$FormState {
+mixin _$SignInFormState {
   EmailAddress get emailAddress;
   Password get password;
   bool get isSubmitted;
   bool get showErrorMessage;
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccess;
 
-  $FormStateCopyWith<FormState> get copyWith;
+  $SignInFormStateCopyWith<SignInFormState> get copyWith;
 }
 
-abstract class $FormStateCopyWith<$Res> {
-  factory $FormStateCopyWith(FormState value, $Res Function(FormState) then) =
-      _$FormStateCopyWithImpl<$Res>;
+abstract class $SignInFormStateCopyWith<$Res> {
+  factory $SignInFormStateCopyWith(
+          SignInFormState value, $Res Function(SignInFormState) then) =
+      _$SignInFormStateCopyWithImpl<$Res>;
   $Res call(
       {EmailAddress emailAddress,
       Password password,
@@ -782,12 +780,13 @@ abstract class $FormStateCopyWith<$Res> {
       Option<Either<AuthFailure, Unit>> authFailureOrSuccess});
 }
 
-class _$FormStateCopyWithImpl<$Res> implements $FormStateCopyWith<$Res> {
-  _$FormStateCopyWithImpl(this._value, this._then);
+class _$SignInFormStateCopyWithImpl<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  _$SignInFormStateCopyWithImpl(this._value, this._then);
 
-  final FormState _value;
+  final SignInFormState _value;
   // ignore: unused_field
-  final $Res Function(FormState) _then;
+  final $Res Function(SignInFormState) _then;
 
   @override
   $Res call({
@@ -814,10 +813,11 @@ class _$FormStateCopyWithImpl<$Res> implements $FormStateCopyWith<$Res> {
   }
 }
 
-abstract class _$FormStateCopyWith<$Res> implements $FormStateCopyWith<$Res> {
-  factory _$FormStateCopyWith(
-          _FormState value, $Res Function(_FormState) then) =
-      __$FormStateCopyWithImpl<$Res>;
+abstract class _$SignInFormStateCopyWith<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  factory _$SignInFormStateCopyWith(
+          _SignInFormState value, $Res Function(_SignInFormState) then) =
+      __$SignInFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {EmailAddress emailAddress,
@@ -827,13 +827,15 @@ abstract class _$FormStateCopyWith<$Res> implements $FormStateCopyWith<$Res> {
       Option<Either<AuthFailure, Unit>> authFailureOrSuccess});
 }
 
-class __$FormStateCopyWithImpl<$Res> extends _$FormStateCopyWithImpl<$Res>
-    implements _$FormStateCopyWith<$Res> {
-  __$FormStateCopyWithImpl(_FormState _value, $Res Function(_FormState) _then)
-      : super(_value, (v) => _then(v as _FormState));
+class __$SignInFormStateCopyWithImpl<$Res>
+    extends _$SignInFormStateCopyWithImpl<$Res>
+    implements _$SignInFormStateCopyWith<$Res> {
+  __$SignInFormStateCopyWithImpl(
+      _SignInFormState _value, $Res Function(_SignInFormState) _then)
+      : super(_value, (v) => _then(v as _SignInFormState));
 
   @override
-  _FormState get _value => super._value as _FormState;
+  _SignInFormState get _value => super._value as _SignInFormState;
 
   @override
   $Res call({
@@ -843,7 +845,7 @@ class __$FormStateCopyWithImpl<$Res> extends _$FormStateCopyWithImpl<$Res>
     Object showErrorMessage = freezed,
     Object authFailureOrSuccess = freezed,
   }) {
-    return _then(_FormState(
+    return _then(_SignInFormState(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress as EmailAddress,
@@ -860,8 +862,10 @@ class __$FormStateCopyWithImpl<$Res> extends _$FormStateCopyWithImpl<$Res>
   }
 }
 
-class _$_FormState with DiagnosticableTreeMixin implements _FormState {
-  const _$_FormState(
+class _$_SignInFormState
+    with DiagnosticableTreeMixin
+    implements _SignInFormState {
+  const _$_SignInFormState(
       {@required this.emailAddress,
       @required this.password,
       @required this.isSubmitted,
@@ -886,14 +890,14 @@ class _$_FormState with DiagnosticableTreeMixin implements _FormState {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'FormState(emailAddress: $emailAddress, password: $password, isSubmitted: $isSubmitted, showErrorMessage: $showErrorMessage, authFailureOrSuccess: $authFailureOrSuccess)';
+    return 'SignInFormState(emailAddress: $emailAddress, password: $password, isSubmitted: $isSubmitted, showErrorMessage: $showErrorMessage, authFailureOrSuccess: $authFailureOrSuccess)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'FormState'))
+      ..add(DiagnosticsProperty('type', 'SignInFormState'))
       ..add(DiagnosticsProperty('emailAddress', emailAddress))
       ..add(DiagnosticsProperty('password', password))
       ..add(DiagnosticsProperty('isSubmitted', isSubmitted))
@@ -904,7 +908,7 @@ class _$_FormState with DiagnosticableTreeMixin implements _FormState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FormState &&
+        (other is _SignInFormState &&
             (identical(other.emailAddress, emailAddress) ||
                 const DeepCollectionEquality()
                     .equals(other.emailAddress, emailAddress)) &&
@@ -932,18 +936,18 @@ class _$_FormState with DiagnosticableTreeMixin implements _FormState {
       const DeepCollectionEquality().hash(authFailureOrSuccess);
 
   @override
-  _$FormStateCopyWith<_FormState> get copyWith =>
-      __$FormStateCopyWithImpl<_FormState>(this, _$identity);
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith =>
+      __$SignInFormStateCopyWithImpl<_SignInFormState>(this, _$identity);
 }
 
-abstract class _FormState implements FormState {
-  const factory _FormState(
+abstract class _SignInFormState implements SignInFormState {
+  const factory _SignInFormState(
           {@required EmailAddress emailAddress,
           @required Password password,
           @required bool isSubmitted,
           @required bool showErrorMessage,
           @required Option<Either<AuthFailure, Unit>> authFailureOrSuccess}) =
-      _$_FormState;
+      _$_SignInFormState;
 
   @override
   EmailAddress get emailAddress;
@@ -956,5 +960,5 @@ abstract class _FormState implements FormState {
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccess;
   @override
-  _$FormStateCopyWith<_FormState> get copyWith;
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith;
 }

@@ -14,11 +14,11 @@ part 'sign_in_state.dart';
 part 'sign_in_bloc.freezed.dart';
 
 @injectable
-class SignInBloc extends Bloc<SignInOrRegister, FormState> {
+class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final AuthFacade _authFacade;
-  SignInBloc(this._authFacade);
+  SignInFormBloc(this._authFacade) : super(SignInFormState.inistial());
 
-  Stream<FormState> signInOrRegister(
+  Stream<SignInFormState> signInOrRegister(
     Future<Either<AuthFailure, Unit>> Function({
       @required EmailAddress emailAddress,
       @required Password password,
@@ -44,11 +44,8 @@ class SignInBloc extends Bloc<SignInOrRegister, FormState> {
   }
 
   @override
-  FormState get initialState => FormState.inistial();
-
-  @override
-  Stream<FormState> mapEventToState(
-    SignInOrRegister event,
+  Stream<SignInFormState> mapEventToState(
+    SignInFormEvent event,
   ) async* {
     yield* event.map(emailChange: (e) async* {
       yield state.copyWith(
